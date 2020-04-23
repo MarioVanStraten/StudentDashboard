@@ -1,0 +1,24 @@
+students = [
+	{
+		UID: 1,
+		name: Aranca
+	}]
+	
+assignments = [
+	{
+		UID: 1,
+		code: W1D1-1
+	}]
+	
+evaluations = [
+	{
+		UID: 1,
+		student: 1,
+		assignment: 1,
+		difficulty: 2,
+		enjoy: 4,
+		comment: "BlaBla",
+		turnin: true
+	}]
+
+

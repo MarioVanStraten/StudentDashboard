@@ -12,7 +12,7 @@
 _global.scss
 _variables.scss
 App.scss
-App.map.scss
+App.css.map
 
 # production
 /build
