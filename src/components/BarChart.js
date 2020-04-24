@@ -24,9 +24,9 @@ function BarChart({ graphData }) {
   }))
 
   return (
-    <>
-      <VictoryChart domainPadding={35} theme={wincTheme}>
-        <VictoryGroup offset={12}>
+    <div className='chart-container'>
+      <VictoryChart domainPadding={20} theme={wincTheme} >
+        <VictoryGroup offset={12} >
           <VictoryBar
             labelComponent={<VictoryTooltip />}
             data={assignmentRatingAverageWithLabels}
@@ -34,7 +34,7 @@ function BarChart({ graphData }) {
             y="difficultyRating"
             tickValues={[1, 2, 3, 4, 5]}
             tickFormat={assignmentRatingAverageWithLabels.map(
-              avg => avg.assignment
+              assignment => assignment.assignment
             )}
           />
           <VictoryBar
@@ -44,22 +44,22 @@ function BarChart({ graphData }) {
             y="enjoymentRating"
             tickValues={[1, 2, 3, 4, 5]}
             tickFormat={assignmentRatingAverageWithLabels.map(
-              avg => avg.assignment
+              assignment => assignment.assignment
             )}
           />
         </VictoryGroup>
         <VictoryAxis
-          // tickValues specifies both the number of ticks and where
-          // they are placed on the axis
-          tickValues={[1, 2, 3, 4, 5]}
-          tickFormat={assignmentRatingAverageWithLabels.map(
-            avg => avg.assignment
-          )}
-        />
-        <VictoryAxis dependentAxis />
+        // tickValues specifies both the number of ticks and where
+        // they are placed on the axis
+        tickValues={[1, 2, 3, 4, 5]}
+        tickFormat={assignmentRatingAverageWithLabels.map(
+          avg => avg.assignment
+        )}
+      />
+      <VictoryAxis dependentAxis />
       </VictoryChart>
-    </>
-    )
-  }
+    </div>
+  )
+}
   
 export default BarChart;

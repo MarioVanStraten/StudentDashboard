@@ -1,12 +1,9 @@
 import React from "react";
 import wincTheme from "./wincTheme";
 import {
-  VictoryBar,
   VictoryChart,
   VictoryAxis,
-  VictoryTooltip,
-  VictoryLine,
-  VictoryGroup
+  VictoryLine
 } from "victory";
 
 function Charts({ graphData }) {
@@ -20,7 +17,7 @@ function Charts({ graphData }) {
   }))
 
   return (
-    <>
+    <div className='chart-container'>
       <VictoryChart domainPadding={15} theme={wincTheme}>
         <VictoryLine
           style={{
@@ -48,7 +45,7 @@ function Charts({ graphData }) {
         />
         <VictoryAxis dependentAxis />
       </VictoryChart>
-    </>
+    </div>
     )
   }
   
